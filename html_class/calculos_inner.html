@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calcule</title>
+</head>
+
+<body>
+    <h1>As quatro operações:</h1>
+    <div style="background-color: greenyellow;">
+        <h3>Multiplicação</h3>
+        <p>Entre com o primeiro número:</p>
+        <input id="first_multi" type="text"><br><br>
+        <p>Entre com o segundo número:</p>
+        <input id="second_multi" type="text">
+        <br><br>
+        <button onclick="multi()">multiplicar</button>
+        <div id="mensagem1">Resultado Aqui!</div>
+    </div>
+    <div style="background-color: hotpink;">
+        <h3>Divisão</h3>
+        <p>Entre com o primeiro número:</p>
+        <input id="first_div" type="text"><br><br>
+        <p>Entre com o segundo número:</p>
+        <input id="second_div" type="text">
+        <br><br>
+        <button onclick="divisao()">divisão</button>
+        <p id="mensagem2">Resultado Aqui!</p>
+    </div>
+    <div style="background-color: red;">
+        <h3>Soma</h3>
+        <p>Entre com o primeiro número:</p>
+        <input id="first_soma" type="text"><br><br>
+        <p>Entre com o segundo número:</p>
+        <input id="second_soma" type="text">
+        <br><br>
+        <button onclick="soma()">soma</button>
+        <div id="mensagem3">Resultado Aqui!</div>
+    </div>
+    <div style="background-color: brown;">
+        <h3>Subtração</h3>
+        <p>Entre com o primeiro número:</p>
+        <input id="first_sub" type="text"><br><br>
+        <p>Entre com o segundo número:</p>
+        <input id="second_sub" type="text">
+        <br><br>
+        <button onclick="subtracao()">subtração</button>
+        <div id="mensagem4">Resultado Aqui!</div>
+    </div>
+
+    <script>
+        function multi() {
+            mensagem1.innerHTML = Number(first_multi.value) * Number(second_multi.value);
+        }
+
+        function divisao() {
+            mensagem2.innerHTML = Number(first_div.value) / Number(second_div.value);
+        }
+
+        function soma() {
+            mensagem3.innerHTML = Number(first_soma.value) + Number(second_soma.value);
+        }
+
+        function subtracao() {
+            mensagem4.innerHTML = Number(first_sub.value) - Number(second_sub.value)
+        }
+    </script>
+</body>
+
+</html>
