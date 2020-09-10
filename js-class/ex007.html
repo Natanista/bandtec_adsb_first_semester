@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex007</title>
+</head>
+
+<body>
+    <!-- Crie um programa em HTML/JS o qual: 
+   a- Tenha um botão "Boas vindas no alerta". Ao clicar nele, aparece um alert na página com alguma mensagem de boas vindas -->
+    <div><button onclick="boasVindas()">Boas vindas no alerta</button></div>
+
+   <button onclick="boasVindasPagina()">Olá</button>
+   <div id="teste">Olá</div>
+
+    <script>
+        function boasVindas() {
+            alert('Boas Vindas');
+        }
+
+        function boasVindasPagina() {
+            teste.innerHTML = "Seja Bem-vindo";
+        }
+    </script>
+</body>
+
+</html>
