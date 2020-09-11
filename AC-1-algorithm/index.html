@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AC1-algoritimos</title>
+</head>
+
+<body>
+    <!--titúlo-->
+    <h3>Calculo da Média do Aluno: BANDTEC2020</h3>
+
+    <!--Campos-->
+    <!--#1-->
+    <div style="background-color: rgb(204, 225, 242);">
+        <p>Algorítimos:</p>
+
+        <input type="text" id="campo1" placeholder="insira sua nota aqui">
+    </div>
+    <!--#2-->
+    <div style="background-color: rgb(198, 248, 229);">
+        <p>Arquitetura Computacional:</p>
+        <input type="text" id="campo2" placeholder="insira sua nota aqui">
+    </div>
+    <!--#3-->
+    <div style="background-color: rgb(251, 247, 213);">
+        <p>Banco de Dados:</p>
+        <input type="text" id="campo3" placeholder="insira sua nota aqui">
+    </div>
+    <!--#4-->
+    <div style="background-color:rgb(249, 222, 215);">
+        <p>Tecnologia da Informação:</p>
+        <input type="text" id="campo4" placeholder="insira sua nota aqui">
+    </div>
+    <!--#5-->
+    <div style="background-color: rgb(245, 205, 222);">
+        <p>Desenvolvimento Socio-Emocional:</p>
+        <input type="text" id="campo5" placeholder="insira sua nota aqui">
+    </div>
+    <!--#6-->
+    <div style="background-color: rgb(226, 190, 241);">
+        <p>Pesquisa e Inovação:</p>
+        <input type="text" id="campo6" placeholder="insira sua nota aqui">
+    </div>
+    <!--Botão-->
+    <div>
+        <button onclick="calculoMedia()">Calcular</button>
+    </div>
+    <br>
+    <!--Resultado-->
+    <div>
+        <span>Resultado:</span><span id="resultado">MÉDIA</span>
+    </div>
+    <!--Script-->
+    <script>
+        // Função para calcular média
+        function calculoMedia() {
+            var media = (Number(campo1.value) + Number(campo2.value) + Number(campo3.value) + Number(campo4.value) +
+                Number(campo5.value) + Number(campo6.value)) / 6
+            resultado.innerHTML = `${media}`;
+        }
+    </script>
+
+</body>
+
+</html>
