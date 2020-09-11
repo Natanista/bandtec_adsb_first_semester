@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varieval</title>
+</head>
+
+<body>
+    <h3>Calculo da Média:</h3>
+    <p>Entre com a nota 1 <input id="nota1" type="text"></p>
+    <p>Entre com a nota 2 <input id="nota2" type="text"></p>
+    <button onclick="calcular()">Calculo da Média</button>
+    <div id="div_mensagem">MÉDIA CALCULADA</div>
+
+
+    
+    <script>
+        function calcular() {
+            var media = (Number(nota1.value) + Number(nota2.value))/2;
+            div_mensagem.innerHTML = `A média da ${nota1.value} com a ${nota2.value} é: ${media} `;
+        }
+    </script>
+</body>
+
+</html>
