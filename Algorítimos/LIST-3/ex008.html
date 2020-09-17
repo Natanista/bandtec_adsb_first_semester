@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex008</title>
+</head>
+<body>
+    <div class="salario">
+        <h4>Digite o seu salário:</h4>
+        <input type="text" id="salario">
+    </div>
+    <div class="btn">
+        <button onclick="calcular()">Calcular Descontos</button>
+    </div>
+    <div id="resultado"></div>
+    <script>
+        function calcular() {
+            var descontoINSS = ((10/100)  * Number(salario.value));
+            var descontoIR = ((20/100)  * Number(salario.value));
+            var somaDescontos = Number(descontoINSS) + Number(descontoIR);
+            salarioFinal = Number(salario.value) - Number(somaDescontos);
+            resultado.innerHTML = `Seus descontos serão de:<br>INSS:R$${descontoINSS}<br>IR:R$${descontoIR}<br>Total de descontos:R$${somaDescontos}<br>Seu salário, após os descontos será de: <u>R$${salarioFinal}</u>`;
+
+        }
+    </script>
+</body>
+</html>

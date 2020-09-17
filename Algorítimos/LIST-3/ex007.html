@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex007</title>
+</head>
+
+<body>
+
+    <div class="nome">
+        <h4>Insira o nome do aluno:</h4>
+        <input type="text" id="nome">
+    </div>
+
+    <div class="aulas">
+        <h4>Insira a quantidade de aulas totais do curso:</h4>
+        <input type="text" id="aulas">
+    </div>
+
+    <div class="faltas">
+        <h4>Quantas aulas o aluno faltou?</h4>
+        <input type="text" id="faltas">
+    </div><br>
+
+    <div class="btn">
+        <button onclick="calcular()">Calcular Frequência</button>
+    </div>
+    <div id="resultado"></div>
+    <br>
+    <div style="background-color: aqua ;" id="resultado"></div>
+    
+    <script>
+        function calcular() {
+            var faltasPorCem = Number(faltas.value) * 100;
+            var divididoPorAulas =  faltasPorCem / Number(aulas.value);
+            var frequencia = 100 - divididoPorAulas;
+            resultado.innerHTML = `Olá ${nome.value}! Sua frequência foi de:<div style="background-color: aqua ; height:20px; width:${frequencia}%" id="resultado">${frequencia}%</div>`;
+        }
+    </script>
+</body>
+
+</html>

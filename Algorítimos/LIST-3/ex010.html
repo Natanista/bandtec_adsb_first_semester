@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex009</title>
+</head>
+<body>
+    <div class="qtdFilhos">
+        <h4>Quantos filhos com idade menor que 10 anos?:</h4>
+        <input type="text" id="menor10">
+    </div>
+    <div class="qtdFilhos">
+        <h4>Quantos filhos com idade igual ou supeior a 10 anos?:</h4>
+        <input type="text" id="maior10">
+    </div>
+    <div class="btn">
+        <button onclick="calcular()">Calcular Auxilio Filhos</button>
+    </div>
+    <div id="resultado"></div>
+    <script>
+        function calcular(){
+            var menorQue10 = Number(menor10.value) * 30;
+            var igualMaior10 = Number(maior10.value) * 20;
+            var somaFilhos = menorQue10 + igualMaior10;
+            resultado.innerHTML = `Você tem ${menor10.value} filhos menores de 10 anos e ${maior10.value} filhos a partir de 10 anos, logo, seu "Auxílio Filhos" será de R$${somaFilhos}`;
+        }
+    </script>
+</body>
+</html>
