@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex004</title>
+</head>
+<body>
+    <div class="input">
+    <input  id="campo1" type="text" placeholder="insira o valor aqui"><br>
+    <input id="campo2" type="text" placeholder="insira o valor aqui"><br>
+    <button onclick="calcular()">Calcular</button>
+    <div id="resultado"></div>
+</div>
+    <script>
+        function calcular (){
+            media = (Number(campo1.value) + Number(campo2.value )) / 2; 
+            resultado.innerHTML = `Sua média foi de ${media}`
+        }
+    </script>
+</body>
+</html>

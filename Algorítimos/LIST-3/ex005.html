@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>ex005</title>
+</head>
+
+<body>
+    <div class="input">
+        <h4>Digite o valor da passagem de ônibus:</h4>
+        <input type="text" id="campo1">
+    </div>
+    <div class="input2">
+        <h4>Quantas viagens você faz por mês?:</h4>
+        <input type="text" id="campo2">
+    </div>
+    <div class="btn">
+        <button onclick="calcularVT()">Calcular VT</button>
+    </div>
+    <div id="resultado"></div>
+    <script>
+        function calcularVT(){
+            var gasto = Number(campo1.value) * Number(campo2.value);
+            resultado.innerHTML  = `Você vai gastar <u>R$${gasto}</u> por mês com ônibus`;
+        }
+    </script>
+</body>
+
+</html>
