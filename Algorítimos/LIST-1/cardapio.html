@@ -16,7 +16,9 @@
     <button onclick=quarta()>Quarta</button>
     <button onclick=quinta()>Quinta</button>
     <button onclick=sexta()>Sexta</button>
+    <button onclick=sabado()>Sabado</button>
     <div id="teste">Descubra o prato de hoje!</div>
+    <img id="img_prato" src="" alt="" style="width: 500px;">
 
 
 </body>
@@ -25,21 +27,31 @@
 <script>
     function segunda() {
     teste.innerHTML = "Hoje é dia de Tofu!";
+    img_prato.src = "/imagens/tofu.jpg";
+   
 }
 
 function terça() {
-    teste.innerHTML = "Hoje é dia de Sora!";
+    teste.innerHTML = "Hoje é dia de <u>Quiche de alho-poró!</u>";
+    img_prato.src = "imagens/quiche.jpg"
 }
 
 function quarta() {
-    teste.innerHTML = "Hoje é dia de Uva!";
+    teste.innerHTML = "Hoje é dia de <b>Feijoada!</b>";
+    img_prato.src = "imagens/feijoada.jpg"
 }
 
 function quinta() {
-    teste.innerHTML = "Hoje é dia de Banana!";
+    teste.innerHTML = "Hoje é dia de Avocado Toast!";
+    img_prato.src = "imagens/avocadotoast.jpg"
 }
 
 function sexta() {
-    teste.innerHTML = "Hoje é dia de Maça!";
+    teste.innerHTML = "Hoje é dia de Choripan Veg!";
+    img_prato.src = "imagens/choripan.jpg"
+}
+function sabado() {
+    teste.innerHTML = "Hoje é dia de CERVEJA!";
+    img_prato.src = "imagens/cerveja.jpg"
 }
 </script>

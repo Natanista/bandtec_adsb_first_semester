@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Limpando Texto</h3>
+    <p><b id="b_1">Ninguem pode viver</b> sem um grande amor<br>
+        <b id="b_2">Ninguem pode viver</b> sem um bom game<br>
+        Isso sim é <span id="s_1">felicidade</span></p><br><br>
+        <button onclick="limpar()">Limpar</button>
+
+        <script>
+            function limpar() {
+                b_1.innerHTML = '';
+                b_2.innerHTML = '';
+                s_1.innerHTML = 'tristeza';
+            }
+        </script>
+</body>
+
+</html>
