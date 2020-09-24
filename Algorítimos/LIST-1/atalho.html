@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Atalhos Matemáticos</h3>
+    <input id='salario' type="text" placeholder="entre com o salário">
+    <br><br>
+    <button onclick='pot2()'>Potencia de 2</button>
+    <button onclick="aumenta1()">Aumenta 1</button>
+    <button onclick="diminui3()">Diminuir 3</button>
+    <button onclick="por5()">Multiplicar por 5</button>
+    <button onclick="dividir5()">Dividir por 5</button>
+    <button onclick="subtrairSimples()"></button>
+    <button onclick="somaSimples()"></button>
+
+    <script>
+        
+
+        function pot2() {
+                var resultado = Number(salario.value)
+                resultado **= 2;
+                alert (resultado);
+        }
+        function aumenta1(){
+            var resultado = Number(salario.value)
+            resultado += 1
+                alert (resultado);
+        }
+        function diminui3(){
+            var resultado = Number(salario.value)
+            resultado -= 3
+                alert (resultado);
+        }
+        function por5() {
+            var resultado = Number(salario.value)
+            resultado *= 5
+                alert (resultado);
+        }
+        function dividir5() {
+            var resultado = Number(salario.value)
+            resultado /= 5
+                alert (resultado);
+        }
+        function subtrairSimples() {
+            var resultado = Number(salario.value);
+            resultado --;
+            alert(resultado)
+        }
+        function somaSimples() {
+            var resultado = Number(salario.value);
+            resultado ++;
+            alert(resultado);
+        }
+        
+    </script>
+</body>
+</html>

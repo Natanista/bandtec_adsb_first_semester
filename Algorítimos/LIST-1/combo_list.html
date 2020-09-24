@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combo List</title>
+</head>
+
+<body>
+    <h3>Fazenda</h3>
+    <select id="bicho" onchange="som()">
+        <option value="escolha um bichinho">**Escolha**</option>
+        <option value="MIAUUU">Gatos</option>
+        <option value="AUAUAU">Cachorro</option>
+        <option value="MUUU">Vaca</option>
+    </select>
+
+    
+
+
+    <script>
+        function som() {
+            alert(bicho.value)
+        }
+    </script>
+</body>
+
+</html>
