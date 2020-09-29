@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="combo1">
+        <select name="" id="combo1" onchange="show()">
+            <option value="1">-Escolha uma epécie-</option>
+            <option value="2">Ovíparos</option>
+            <option value="3">Mamíferos</option>
+        </select>
+    </div><br>
+    <div class="combo2" >
+        <select name="" onchange="mudarIMG1()" id="combo2" style="display: none;">
+            <option value="4">-Escolha um Ovíparo-</option>
+            <option value="5">Galinha</option>
+            <option value="6">Peixe</option>
+            <option value="7">Tartaruga</option>
+        </select>
+    </div>
+
+    <div class="combo3">
+        <select name="" onchange="mudarIMG2()" id="combo3" style="display: none;">
+            <option value="8">-Escolha um mamífero-</option>
+            <option value="9">Elefante</option>
+            <option value="10">Porco</option>
+            <option value="11">Coelho</option>
+        </select>
+       
+    </div>
+
+    <div class="img">
+        <img src="" alt="" id="foto1" style="width: 300px;">
+        <img src="" alt="" id="foto2" style="width: 300px;">
+    </div>
+    <div>
+        <input type="text" id="preco" style="display: none;">
+    </div>
+
+    <div>
+        <button style="display: none;" id="btn" onclick="calcular()">Calcular Imposto</button>
+    </div>
+
+    <div id="resultado"></div>
+    
+    <script>
+        function show() {
+            if (combo1.value ==  2) {
+                combo2.style = 'display:block';
+                combo3.style = 'display:none';
+                foto1.src = '';
+                foto2.src = '';
+            } else if (combo1.value == 3) {
+                combo3.style = 'display: block';
+                combo2.style = 'display: none';
+                foto1.src = '';
+                foto2.src = '';
+            } else {
+                combo3.style = 'display: none';
+                combo2.style = 'display: none';
+                foto1.src = '';
+                foto2.src = '';
+            }
+        }
+        function mudarIMG1() {
+            if (combo2.value == 5) {
+                foto1.src = '/LIST-3.1/img/galinha.jpeg';
+            } else if (combo2.value == 6) {
+                foto1.src = '/LIST-3.1/img/peixe.jpeg';
+            } else if (combo2.value == 7) {
+                foto1.src = '/LIST-3.1/img/tartaruga.jpeg'
+            } else {
+                foto1.src = '';
+            }
+        }
+
+    </script>
+</body>
+
+</html>
