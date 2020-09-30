@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IF/ELSE</title>
+</head>
+<body>
+    <h3>Calculo do valor da multa</h3>
+    <p>Informe o total de pontos:</p><br>
+    <input type="text" id="pontos" placeholder="informe a qtd de pontos"><br><br>
+    <button onclick="calcular()">Calcular valor da multa</button><br><br>
+    <div id="resultado"></div>
+
+    <script>
+        function calcular() {
+            var valorMulta = 0;
+            if(pontos.value >= 20) {
+                alert("Sua carteira está suspensa");
+                valorMulta = Number(pontos.value) * 87;
+            } else {
+                valorMulta = Number(pontos.value) * 78;
+            }
+            resultado.innerHTML = `O valor da multa é ${valorMulta}`
+        }
+    </script>
+</body>
+</html>
