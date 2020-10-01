@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if_else_if</title>
+</head>
+
+<body>
+    <h3>Analise da conta do Rodolpho</h3>
+    <p>Entre com o saldo do cliente:</p>
+    <input type="text" id="saldo">
+    <br><br>
+    <button onclick="analisar()">Analisar</button>
+    <br><br>
+    <div id="resultado"></div>
+
+    <script>
+        let saldoCliente = Number(saldo.value)
+
+        function analisar() {
+            if (saldoCliente < 0) {
+                resultado.innerHTML = `Com o saldo de R$${saldoCliente} você está com a conta negativa`;
+            } else if (saldoCliente <= 2000) {
+                resultado.innerHTML = `Com o saldo de R$${saldoCliente} você está com saldo NORMAL`;
+            } else if (saldoCliente < 5000) {
+                resultado.innerHTML = `Com o saldo de R$${saldoCliente} você está acima da média!`;
+            } else {
+                resultado.innerHTML = `Com o saldo de R$${saldoCliente} você tem o perfil de INVESTIDOR`;
+            }
+        }
+    </script>
+</body>
+
+</html>
