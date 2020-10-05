@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+/*global*/
 * {
     margin: 0;
     padding: 0;
 }
-
+ 
 body {
     font-family: sans-serif;
 }
@@ -14,15 +16,35 @@ body {
     background-image: url(/img/back.jpg);
     min-height: 1000px;
     background-size:cover;
+    
  }
  
  .header img {
      width: 250px;
      background-size: cover;
      padding: 20px 0 0 30px;
+    
  }
 
+ /*button*/
+ .btn {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: 1px solid #fff;
+    cursor:pointer;
+    color:#fff;
+    padding: 20px;
+    border-radius: 60px;
+    font-size: 20px;
 
+}
+
+.btn-div {
+padding-top: 30px;;
+}
+
+
+/*nav*/
 
 .nav {
     float:right;
@@ -63,19 +85,4 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-.btn {
-        background-color: Transparent;
-        background-repeat:no-repeat;
-        border: 1px solid #fff;
-        cursor:pointer;
-        color:#fff;
-        padding: 20px;
-        border-radius: 60px;
-        font-size: 20px;
-    
-}
-
-.btn-div {
-    padding-top: 30px;;
-}
 
