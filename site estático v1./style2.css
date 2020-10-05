@@ -9,12 +9,13 @@
 
 body {
     font-family: sans-serif;
+    
 }
 
 /*Header*/
 .header {
     background-image: url(/img/back2.jpg);
-    min-height: 1000px;
+    max-height: 1300px;
     background-size: cover;
 }
 
@@ -89,27 +90,38 @@ body {
 /*container*/
 
 .container {
-    margin: 24px 18px;
+    margin: 24px 40px;
     width: 500px;
     max-width: 90%;
-    height: 500px;
+    height: 400px;
 
+   
+    
+}
 
-
-
+.container2 {
+    margin-left:1100px ;
+    height: 1000px;
+    position: relative;
+    right: 150px;
+    bottom: 430px;
+ 
+    
 }
 
 .container form {
     width: 80%;
     height: 80%;
-    padding: 80px;
-    margin-left: 40px;
+    padding: 90px;
+    margin-left: 150px;
     background-color: #00CBB6;
     opacity: 0.7;
     border-radius: 4px;
     font-size: 20px;
 
 }
+
+
 
 .container form h1 {
     text-align: center;
