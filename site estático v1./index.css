@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 /*global*/
+html{
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -109,3 +113,9 @@ padding-top: 30px;;
     
   
 }
+
+.img-how {
+    background-image: url(/img/how.jpg);
+}
+
+
