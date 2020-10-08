@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>operador AND</title>
+</head>
+
+<body>
+    <h3>Entre com a média do aluno:</h3>
+    <input type="text" id="media" placeholder="insira o valor aqui"><br><br>
+    <h3>Entre com a frequência do aluno:</h3>
+    <input type="text" id="frequencia" placeholder="inisira o valor aqui"><br><br>
+    <button onclick="analisar()">Analisar o aluno</button>
+
+    <script>
+        function analisar() {
+            if(media.value >= 6 && frequencia.value >=75) {
+                alert("Parabéns, você foi aprovado!");
+            } else {
+                alert("Reprovado");
+            }
+        }
+    </script>
+</body>
+
+</html>

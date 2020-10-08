@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex005</title>
+</head>
+
+<body>
+    <h3>Quantos pães franceses você tem comido por dia?</h3>
+    <input id="paes" type="text" placeholder="insira o valor aqui">
+
+    <h3>Quantos pacotes de bolacha você tem comido por dia?</h3>
+    <input id="bolachas" type="text" placeholder="insira o valor aqui">
+
+    <h3>Quantos copos de achocolatados você tem tomado por dia?</h3>
+    <input type="text" id="achocolatado" placeholder="insira o valor aqui">
+<br>
+    <button onclick="verificar()">Verificar calorias</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function verificar() {
+            let numPaes = Number(paes.value);
+            let numBolachas = Number(bolachas.value);
+            let numAchocolatados = Number(achocolatado.value);
+            let calPaes = numPaes * 50;
+            let calBolachas = numBolachas * 80;
+            let calAchocolatados = numAchocolatados * 70;
+            let calorias = calBolachas + calAchocolatados + calPaes;
+
+            if(calorias < 200) {
+                resultado.innerHTML = `Parabéns, vai sair em forma da quarentena!`;
+            } else if(calorias >=200 && calorias <=400) {
+                resultado.innerHTML = `Cuidado, vai ficar mais "fofinho(a)" após quarentena!`;
+            } else {
+                resultado.innerHTML = `Bom, acho que muitos não vão te reconhecer após a quarentena`;
+            }
+        }
+    </script>
+</body>
+
+</html>

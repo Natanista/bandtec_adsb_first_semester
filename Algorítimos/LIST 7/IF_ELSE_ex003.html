@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex003</title>
+</head>
+
+<body>
+    <h3>Digite sua nota:</h3>
+    <input type="text" id="nota">
+
+    <button onclick="classificar()">Classificar Aluno</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function classificar() {
+            let notaAluno = nota.value;
+
+            if (notaAluno < 5 && notaAluno >= 0) {
+                resultado.innerHTML = `<span style='color:red;'>O aluno precisa de muita ajuda!</span>`;
+            } else if (notaAluno >= 5 && notaAluno <= 7) {
+                resultado.innerHTML = `<span style='color:orange;'>Aluno na média`;
+            } else if (notaAluno > 7 && notaAluno <= 9.5) {
+                resultado.innerHTML = `<span style="color:green">Aluno acima da média</span>`;
+            } else if (notaAluno > 9.5 && notaAluno <= 10) {
+                resultado.innerHTML = `<span style="color:blue;">Aluno fora da curva</span>`;
+            } else {
+                resultado.innerHTML = `Nota ${notaAluno} é inválida!`;
+            }
+        }
+    </script>
+</body>
+
+</html>

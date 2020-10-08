@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E_ex001</title>
+</head>
+
+<body>
+    <h3>Digite a sua renda</h3>
+    <input type="text" id="renda" placeholder="insira o valor aqui">
+    <h3>Digite a renda total de sua familia:</h3>
+    <input type="text" id="familia" placeholder="insira o valor aqui"><br><br><br>
+    <button onclick="verificar()">Verificar ajuda</button>
+
+    <script>
+        function verificar() {
+        if(renda.value <= 1050 && familia.value <= 2100) {
+            alert('Você terá direito!');
+        } else {
+            alert('Você não terá direito')
+        }
+    }
+    </script>
+</body>
+
+</html>

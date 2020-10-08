@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex004</title>
+</head>
+
+<body>
+    <h3>Qual time você torce?</h3>
+    <select id="times">
+        <option value="time1">Corinthians</option>
+        <option value="time2">Palmeiras</option>
+        <option value="time3">Santos</option>
+        <option value="time4">São Paulo</option>
+    </select>
+
+    <button onclick="falar()">Fale sobre esse time</button>
+
+    <div id="resultado" style="font-size:30px;"></div>
+
+    <script>
+        function falar() {
+        if(times.value == 'time1') {
+            resultado.innerHTML = `<span style="background-color:black; color:white;">Salve o Corinthians</span>`;
+        } else if(times.value == 'time2') {
+            resultado.innerHTML = `<span style="background-color:green; color:white;">Salve o alviverde imponente</span>`;
+        } else if(times.value == 'time3') {
+            resultado.innerHTML = `Agora quem da bola é o Santos`;
+        } else {
+            resultado.innerHTML = `<span style="background-color:black; color:red;">Salve o tricolor Paulista</span>`;
+        }
+        }
+    </script>
+</body>
+
+</html>
