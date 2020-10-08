@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex009</title>
+</head>
+
+<body>
+    <button onclick="clique1()">Nota1</button>
+    <br><br>
+    <button onclick="clique1()">Nota2</button>
+    <br><br>
+    <button onclick="clique1()">Nota3</button>
+    <br><br>
+    <button onclick="clique1()">Nota4</button>
+    <br><br>
+    <button onclick="clique1()">Nota5</button>
+    <br><br>
+
+    <div id="resultado">Sua média: <span>0</span></div>
+
+    <script>
+       
+     
+        let media = 0;
+
+        function clique1() {
+            media++;
+            resultado.innerHTML = media / 5;
+            
+        }
+
+    </script>
+</body>
+
+</html>

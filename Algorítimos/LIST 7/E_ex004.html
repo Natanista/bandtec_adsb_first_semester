@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E_ex004</title>
+</head>
+<body>
+    <h3>Digite o tempo em anos que você trabalhou para o pai da pretendente:</h3>
+    <input type="text" id="anos" placeholder="insira o valor aqui">
+    <h3>Insira a quantidade em kilos de trigo que as plantações renderam:</h3>
+    <input type="text" id="trigo" placeholder="insira o valor aqui">
+    <h3>Insira a quantidade de dias que você faltou do trabalho por estar doente:</h3>
+    <input type="text" id="faltas" placeholder="insira o valor aqui">
+    <button onclick="verificar()">Deu Match?</button>
+    <div id="resultado" style="font-size: 50px;"></div>
+    <img id="imagem" src="" alt="" style="width: 900px;">
+
+    <script>
+        function verificar(){
+            if(anos.value >= 5 && trigo.value >= 300 && faltas.value <= 5) {
+                resultado.innerHTML = `Minha filha será sua!`;
+                imagem.src = 'img/noiva.jpeg';
+            } else {
+                resultado.innerHTML = `Deu ruim!Trabalhe mais 2 anos`;
+                imagem.src = 'img/angry.jpeg';
+            }
+        }
+    </script>
+</body>
+</html>

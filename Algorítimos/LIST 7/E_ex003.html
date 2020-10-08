@@ -25,13 +25,17 @@
         <option value="7">picanha de soja</option>
         <option value="8">cupim</option>
         <option value="9">coração</option>
-    </select>
+    </select><br>
 
     <button onclick="verificar()">Sou vegano</button>
 
     <script>
         function verificar() {
-            
+            if(cafe.value == 2 && almoco.value==5 && jantar.value ==7 ) {
+                alert('Sim, você é vegano!');
+            } else{
+                alert('Não, você não é vegano');
+            }
         }
     </script>
 </body>
