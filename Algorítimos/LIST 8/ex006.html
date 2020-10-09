@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex006</title>
+</head>
+
+<body>
+    <select name="" id="arroz">
+        <option value="1">Integral</option>
+        <option value="2">Branco</option>
+    </select>
+
+    <h3>Qual o tempo de cozimento?</h3>
+    <input type="text" id="cozimento">
+
+    <h3>Qual a quantidade de sal usada?</h3>
+    <input type="text" id="sal">
+
+    <button onclick="avaliar()">Avaliar arroz</button>
+
+    <div id="resultado" style="font-size:30px;"></div>
+    <img src="" alt="" id="imagem" style="width: 700px;">
+
+    <script>
+        function avaliar() {
+            if (arroz.value == '2' && cozimento.value == 10 && sal.value <= 10 || arroz.value == '1' && cozimento
+                .value == 20 && sal.value <= 15) {
+            resultado.innerHTML = 'Seu arroz está perfeito';
+            imagem.src = 'img/arroz.jpeg';
+            } else {
+                resultado.innerHTML = 'Seu arroz não está perfeito';
+                imagem.src = 'img/jacquin.jpeg';
+            }
+        }
+    </script>
+</body>
+
+</html>

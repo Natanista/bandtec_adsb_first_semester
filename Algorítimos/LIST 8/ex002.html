@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex002</title>
+</head>
+<body>
+    <select id="combo">
+        <option value="1">Dinheiro</option>
+        <option value="2">Cartão de Débito</option>
+        <option value="3">Cartão de crédito</option>
+        <option value="4">Boleto</option>
+    </select>
+    <button onclick="analisar()">Analisar Compra</button>
+
+    <script>
+        function analisar(){
+            
+        if(combo.value == '1' || combo.value == '2'){
+            alert('Você terá que pagar a vista');
+        } else {
+            alert('Pagamento poderá ser parcelado');
+        }
+        }
+    </script>
+</body>
+</html>

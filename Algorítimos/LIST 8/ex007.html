@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex007</title>
+</head>
+
+<body>
+    <h3>Digite a sua temperatura:</h3>
+    <input type="text" id="temperatura">
+
+    <h3>Digite a umidade do ar:</h3>
+    <input type="text" id="umidade"><br><br>
+
+    <button onclick="avaliar()">Avaliar Clima</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function avaliar() {
+            if (umidade.value > 100 || umidade.value < 0) {
+                alert(`Valor de umidade inválido`);
+            } else if (temperatura.value >= 22 && temperatura.value <= 23 && umidade.value < 60) {
+                resultado.innerHTML = `Clima agradável`;
+            } else {
+                resultado.innerHTML = `Clima desconfortável`;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

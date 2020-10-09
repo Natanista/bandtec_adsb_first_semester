@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex009</title>
+</head>
+
+<body>
+    <h3>Digite sua nota:</h3>
+    <input type="text" id="nota">
+
+    <h3>Digite a sua frequência:</h3>
+    <input type="text" id="frequencia">
+
+    <button onclick="analisar()">Analisar Aluno</button>
+
+    <div id="resultado"></div>
+    <div id="resultado2"></div>
+    
+
+
+    <script>
+        function analisar(){
+        if(nota.value >= 0 && nota.value < 6 && frequencia.value >= 75){
+            resultado.innerHTML = `Aluno ficou abaixo da média`;
+            resultado2.innerHTML = `Aluno aprovado por frequência`;
+        }
+        else if(nota.value >= 0 && nota.value < 6 && frequencia.value < 75){
+            resultado.innerHTML = `Aluno ficou abaixo da média`;
+            resultado2.innerHTML = `Aluno reprovado por frequência`;
+        } else if(nota.value >= 6 && nota.value <= 8 && frequencia.value >= 75){
+            resultado.innerHTML = `Aluno ficou da média`;
+            resultado2.innerHTML = `Aluno aprovado por frequência`;
+        }else if(nota.value >= 6 && nota.value <= 8 && frequencia.value < 75){
+            resultado.innerHTML = `Aluno ficou da média`;
+            resultado2.innerHTML = `Aluno reprovado por frequência`;
+        } 
+        else if(nota.value > 8 && nota.value <=10 && frequencia.value >= 75){
+            resultado.innerHTML = `Aluno acima da média`;
+            resultado2.innerHTML = `Aluno aprovado por frequência`;
+        }else if(nota.value > 8 && nota.value <=10 && frequencia.value < 75){
+            resultado.innerHTML = `Aluno acima da média`;
+            resultado2.innerHTML = `Aluno reprovado por frequência`;
+        }
+         else if(nota.value < 0 || nota.value > 10){
+          alert(`Onde já se viu nota <0 ou >10?!`);
+            resultado2.innerHTML = ``;
+        } else if(frequencia.value > 100 || frequencia.value < 0){
+            alert(`Onde já se viu frequência < 0 ou >10?!`);
+            resultado2.innerHTML = ``;
+        }else {
+            resultado.innerHTML = ``;
+            resultado2.innerHTML = ``;
+        }
+        }
+    </script>
+
+</body>
+
+</html>

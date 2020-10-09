@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex001</title>
+</head>
+<body>
+    <h3>Digite o valor da sua renda individual:</h3>
+    <input type="text" id="renda">
+
+    <h3>Digite a sua renda familiar:</h3>
+    <input type="text" id="familia">
+
+    <button onclick="verificar()">Terei o beneficio</button>
+
+    <div id="resultado" style="font-size:100px;"></div>
+
+    <script>
+        function verificar() {
+            if(renda.value <=2000 || renda.value <=3000) {
+                resultado.innerHTML = `Você terá direito ao auxílio`;
+            } else {
+                resultado.innerHTML = `Sem direito ao auxílio`;
+            }
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex005</title>
+</head>
+<body>
+    <h3>Qual a cor do seu cabelo?:</h3>
+    <select id="cabelo">
+        <option value="1">Preto</option>
+        <option value="2">Vermelho</option>
+        <option value="3">Amarelo</option>
+        <option value="4">Castanho</option>
+    </select>
+
+    <h3>Qual a sua altura?</h3>
+    <input type="text" id="altura">
+    <button onclick="verificar()">Deu Match?</button>
+
+    <img src="" alt="" id="imagem" style="width: 800px;">
+
+    <script>
+        function verificar() {
+            if(cabelo.value <=2 && altura.value >=1.7){
+                imagem.src = 'img/happy.jpeg';
+            } else {
+                imagem.src = 'img/sad.jpeg';
+            }
+        }
+    </script>
+</body>
+</html>

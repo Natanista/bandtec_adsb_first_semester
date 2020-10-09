@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex004</title>
+</head>
+
+<body>
+    <h3>Digite o nome da empresa:</h3>
+    <input type="text" id="empresa">
+
+    <h3>Digite o valor da bolsa:</h3>
+    <input type="text" id="bolsa">
+
+    <h3>Digite o valor do VR:</h3>
+    <input type="text" id="vr">
+
+    <h3>Digite o tempo de deslocamento até a empresa:</h3>
+    <input type="text" id="deslocamento"><br><br>
+
+    <button onclick="verificar()">É a preferida?</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function verificar() {
+            if(bolsa.value >= 1800 || vr.value >= 20 || deslocamento.value <= 30) {
+                resultado.innerHTML = `A empresa ${empresa.value} é uma de suas preferências`;
+            } else {
+                resultado.innerHTML = `A empresa ${empresa.value} está fora da sua lista`;
+            }
+        }
+    </script>
+</body>
+
+</html>
