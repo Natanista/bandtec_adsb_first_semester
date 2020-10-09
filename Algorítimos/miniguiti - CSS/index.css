@@ -45,6 +45,8 @@ nav ul {
     font-size: 25px;
 }
 
+/*nav*/
+
 .nav {
     float: right;
 
@@ -110,4 +112,39 @@ nav ul {
     width: 225px;
     ;
 }
+/* fim news*/
 
+/*Inicio Valores*/
+.box {
+    
+    /*pode usar overflow ao invés de height*/
+    overflow: auto;
+}
+.box .box-item {
+    text-align: center;
+    width: 300px;
+    float: left;
+    margin:40px 20px 30px 20px;
+
+}
+
+.box img {
+    height: 300px;
+}
+
+/*Fim Valores*/
+
+
+/*Inicio do footer*/
+.footer {
+    background-color: orangered;
+}
+
+.footer h3{
+    text-align: center;
+    color: white;
+    margin: 40px;
+    padding-top: 10px;
+
+}
+/*Fim do Footer*/
