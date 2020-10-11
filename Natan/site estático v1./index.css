@@ -96,6 +96,44 @@ body {
 
 /*fim showcase*/
 
+/*Inicio Segunda Parte*/
+.box-item{
+    padding-top:70px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.box-item p{
+   position:relative;
+    left: 100px;
+    bottom:60px;
+    font-size:20px;
+}
+
+.box-item h1 {
+    font-size:40px;
+    text-align: center;
+    border-top: 1px solid #40E0D0;
+    border-left: 1px solid #40E0D0;
+    height: 100px;
+    width: 600px;
+    padding: 30px;
+    
+}
+
+.box-item p {
+    text-align: center;
+    
+}
+
+/*Fim Segunda parte*/
+
+/*Terceira parte*/
+.third {
+    background-image: url(/img/);
+}
+/*Fim Terceira parte*/
+
 /*footer*/
 .footer img {
     width: 40px;
