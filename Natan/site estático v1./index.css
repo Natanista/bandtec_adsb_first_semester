@@ -131,7 +131,7 @@ body {
 /*Terceira parte*/
 .third {
     background-image: url(img/img2.jpg);
-    min-height: 610px;
+    min-height: 900px;
     background-size: cover;
     
 }
@@ -141,7 +141,9 @@ body {
     font-size:50px;
     margin-left: 90px;
     padding: 100px 20px 20px 10px;
-    width: 300px;
+    width: 500px;
+    height: 300px;
+    text-align: center;
     background-color: #00CBB6;
 
 }
@@ -150,13 +152,23 @@ body {
     border: none;
     background-color: #00CBB6;
     margin-top: 20px;
-    margin-left: 180px;
+    margin-left: 230px;
+
 
 }
 
 /*Fim Terceira parte*/
 
+
+
 /*funcionalidades*/
+.container img {
+    width: 200px;
+}    
+
+.container {
+    
+}
 /*funcionalidades*/
 
 /*footer*/
