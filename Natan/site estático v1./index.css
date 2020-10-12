@@ -130,9 +130,34 @@ body {
 
 /*Terceira parte*/
 .third {
-    background-image: url(/img/);
+    background-image: url(img/img2.jpg);
+    min-height: 610px;
+    background-size: cover;
+    
 }
+
+.third h2{
+    color: #fff;
+    font-size:50px;
+    margin-left: 90px;
+    padding: 100px 20px 20px 10px;
+    width: 300px;
+    background-color: #00CBB6;
+
+}
+
+.btn-blue {
+    border: none;
+    background-color: #00CBB6;
+    margin-top: 20px;
+    margin-left: 180px;
+
+}
+
 /*Fim Terceira parte*/
+
+/*funcionalidades*/
+/*funcionalidades*/
 
 /*footer*/
 .footer img {
