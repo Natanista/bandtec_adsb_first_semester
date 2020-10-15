@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex002</title>
+</head>
+
+<body>
+    <button onclick="jogar1()">Jogador 1 joga o dadinho</button>
+    <div id="jogador1"></div>
+    <button onclick="jogar2()">Jogador 2 joga o dadinho</button>
+    <div id="jogador2"></div>
+    <div id="resultado"></div>
+
+    <script>
+        function jogar1() {
+           jogador1.innerHTML = `${Math.trunc((Math.random() * 6) + 1)}`;
+        }
+
+        function jogar2() {
+            jogador2.innerHTML = `${Math.trunc((Math.random() * 6) + 1)}`;
+            
+        }
+    </script>
+</body>
+
+</html>
