@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>posincrement</title>
+</head>
+
+<body>
+    <button onclick="analisar()">Clique aqui</button>
+
+    <div id="resultado"></div><br><br>
+    <div id="divpos"></div>
+
+    <script>
+        let pre = 0;
+        let pos = 0;
+
+        function analisar() {
+            
+
+            if (pos++ == 5) {
+                divpos.innerHTML = `cheguei no pos`;
+            } else {
+               divpos.innerHTML = `ainda não : ${pos}`;
+            }
+             if (++pre == 5) {
+                resultado.innerHTML = `cheguei no pre`;
+            } else {
+                resultado.innerHTML = `ainda não : ${pre}`;
+            }
+        }
+    </script>
+</body>
+
+</html>

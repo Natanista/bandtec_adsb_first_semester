@@ -2,7 +2,7 @@ let media = 0;
 
 function clique1() {
   media++;
-  mediaFinal = media / 5;
+  let mediaFinal = media / 5;
   resultado.innerHTML = `<b>${mediaFinal.toFixed(1)}</b>`;
   if (mediaFinal < 2) {
     imagem.src = "img/crying.jpeg";
