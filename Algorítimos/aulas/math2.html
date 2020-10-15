@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Operadores matemáticos 2</h3>
+    <p>Entre com um número fracionário</p>
+    <input type="text" id="num"><br>
+    <button onclick="toFixed()">toFixed</button><br>
+    <button onclick="parseInte()">parseInt</button><br>
+    <button onclick="round()">Round</button><br>
+    <button onclick="trunc()">Trunc</button><br>
+
+
+    <script>
+        function toFixed() {
+            let numero = Number(num.value);
+            alert(numero.toFixed());
+        }
+
+        function parseInte() {
+            let numero = Number(num.value);
+            alert(parseInt(numero));
+        }
+
+        function round() {
+            let numero = Number(num.value);
+            alert(Math.round(numero));
+        }
+
+        function trunc() {
+            let numero = Number(num.value);
+            alert(Math.trunc(numero));
+        }
+    </script>
+</body>
+
+</html>

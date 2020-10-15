@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condição ternário</title>
+</head>
+
+<body>
+    <h3>Operador condicional ternário</h3>
+    <p>Entre com a média do aluno</p>
+    <input type="text" id="media"><br>
+    <button onclick="basico()">Básico</button>
+    <button onclick="variar()">Váriavel</button>
+    <button onclick="condicao()">Condição</button>
+    <button onclick="operacao()">Operações</button>
+
+    <script>
+        function basico() {
+            media.value >= 6 ? alert('aprovado') : alert('reprovado');
+        }
+
+        function variar() {
+            let result = (media.value >= 6) ? 'aprovado' : 'reprovado';
+            alert(result);
+        }
+
+        function condicao() {
+            media.value < 6 ? alert('reprovado') : media.value >= 9 ? alert('Superou!!') : alert('aprovado');
+        }
+
+        function operacao() {
+            media.value < 6 ? (alert('reprovado'), alert('tente novamente')) : alert('aprovado');
+        }
+    </script>
+
+
+</body>
+
+</html>

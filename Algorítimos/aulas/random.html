@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random</title>
+</head>
+
+<body>
+    <h3>Números aleatórios</h3>
+    <button onclick="primeira()">(>=0e<1)</button> <button onclick="segunda()">(>=0e<3)</button> <button
+                onclick="terceira()">(>-3e<=0)</button> <button onclick="quarta()">(>=1e<3)</button> <button
+                        onclick="quinta()">de4a8</button>
+    <button onclick="limpar()">Limpar resultado</button>
+    <div id="resultado" style="text-align: center; padding-top: 30px;color: red;"></div>
+
+    <script>
+        function limpar() {
+            resultado.innerHTML = ``;
+        }
+
+        function primeira() {
+            resultado.innerHTML = `${Math.random()}`;
+        }
+
+        function segunda() {
+            resultado.innerHTML = `${Math.random() * 3}`;
+        }
+
+        function terceira() {
+            resultado.innerHTML = `${Math.random() * -3}`;
+        }
+
+        function quarta() {
+            resultado.innerHTML = `${(Math.random() * 2) + 1}`;
+        }
+
+        function quinta() {
+            resultado.innerHTML = `${Math.trunc((Math.random() * 5) + 4)}`;
+        }
+    </script>
+</body>
+
+</html>

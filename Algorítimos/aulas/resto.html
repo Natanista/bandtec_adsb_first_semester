@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resto da divisão</title>
+</head>
+
+<body>
+    <h3>Cálculo do resto da Divisão</h3>
+    <p>Entre com o primeiro número:</p>
+    <input type="text" id="primeiro">
+
+
+    <p> Entre com o segundo número:</p>
+    <input type="text" id="segundo">
+    <button onclick="resto()">Qual o resto da divisão?</button>
+    <button onclick="par()">O primeiro é par?</button><br>
+    <button onclick="impar()">O segundo é ímpar?</button>
+
+    <script>
+        function resto() {
+            alert(primeiro.value % segundo.value)
+        }
+
+        function par() {
+            (primeiro.value % 2) == 0 ? alert(`O primeiro é par!`) : alert(`O primeiro é impar!`);
+        }
+
+        function impar() {
+            let result = segundo.value % 2;
+            result == 0 ? alert(`O segundo número não é ímpar!`) : alert(`O segundo número é ímpar!`);
+            //  if(result == 0){
+            //    alert(`O segundo número não é ímpar!`)
+            //} else {
+            //  alert(`O segundo número é ímpar!`);
+        }
+    </script>
+</body>
+
+</html>
