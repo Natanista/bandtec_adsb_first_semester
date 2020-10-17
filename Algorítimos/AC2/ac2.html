@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AC2</title>
+</head>
+
+<body>
+    <!--Campos: loja, conta, digito e botão Conferir-->
+    <div id="tela_inicial" style="display: block;">
+
+        <h3>Loja:</h3>
+        <input type="text" id="loja">
+
+        <h3>Conta</h3>
+        <input type="text" id="conta">
+
+        <h3>Digito:</h3>
+        <input type="text" id="digito"><br><br>
+
+        <button onclick="conferir()">Conferir</button>
+    </div>
+
+    <script>
+        function conferir() {
+            let digito = 0;
+
+            if (conta.value % loja.value < 3) {
+                digito = 1;
+
+            } else if (conta.value % loja.value >= 3 && conta.value % loja.value <= 6) {
+                digito = 2;
+
+            } else {
+                digito = 3;
+            }
+
+            if(loja.value >= 1 || loja.value <= 10){
+                tela_inicial.style = 'display: none';
+            } else{
+                alert('Loja Inválida');
+                tela_inicial.style ='display:block'
+            }
+
+            if(conta <= 0){
+                alert('Conta Inválida');
+            }else{
+                tela_inicial.style = 'display:none';
+            }
+
+
+
+
+
+        }
+    </script>
+</body>
+
+</html>
