@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex001</title>
+</head>
+<body>
+    <h3>Digite o seu nome:</h3>
+    <input type="text" id="nome">
+
+    <h3>Digite a sua idade</h3>
+    <input type="text" id="idade">
+
+    <button onclick="avaliar()">Avaliar Aluno</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function avaliar(){
+        idade.value >= 18 ? resultado.innerHTML = `${nome.value} vamos tirar a CNH?`: resultado.innerHTML = `${nome.value} vai jogar Playstation!`; 
+    }
+    </script>
+</body>
+</html>
