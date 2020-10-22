@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-img: url(img/img2.jpg);
+    
 }
 
 /*Header*/
@@ -21,13 +21,13 @@ body {
 
 .header2 {
     background-color: turquoise;
-    height: 120px;
+    height: 140px;
     margin-bottom: 100px;
 
 }
 
 .header img {
-    width: 250px;
+    width: 350px;
     background-size: cover;
     padding: 20px 0 0 30px;
 
@@ -75,7 +75,7 @@ body {
 }
 
 .nav img {
-    width: 30px;
+    width: 45px;
     padding-left: 50px;
 }
 
@@ -112,12 +112,9 @@ body {
 
 
 .footer {
-    margin-top: 210px;
-
+    margin-top: 270px;
     background-color: turquoise;
     height: 80px;
-
-
 }
 
 .section {

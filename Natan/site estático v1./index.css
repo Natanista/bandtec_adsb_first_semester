@@ -12,7 +12,7 @@ html {
 
 body {
     font-family: 'Roboto', sans-serif;
-    ;
+    
 }
 
 /*Header*/
@@ -20,14 +20,12 @@ body {
     background-image: url(/img/back.jpg);
     min-height: 1000px;
     background-size: cover;
-
 }
 
 .header img {
-    width: 250px;
+    width: 350px;
     background-size: cover;
     padding: 20px 0 0 30px;
-
 }
 
 /*Fim do Header*/
@@ -47,7 +45,14 @@ body {
 
 .btn-div {
     padding-top: 30px;
-    ;
+    
+}
+
+.btn-div button:hover{
+    background-color: white;
+    opacity: 0.9;
+    color: black;
+    
 }
 
 /*fim do button*/
@@ -57,7 +62,7 @@ body {
 .nav {
     float: right;
     margin-right: 50px;
-    ;
+    
 }
 
 .nav li {
@@ -69,13 +74,13 @@ body {
 
 .nav a {
     text-decoration: none;
-    color: black;
-    font-size: 18px;
+    color: white;
+    font-size: 28px;
 
 }
 
 .nav img {
-    width: 30px;
+    width: 45px;
     padding-left: 50px;
 }
 
@@ -164,6 +169,7 @@ body {
 /*funcionalidades*/
 .container {
     overflow: auto;
+    text-align: center;
 }
 
 .container img {
@@ -172,7 +178,7 @@ body {
 }
 
 .boxes {
-    text-align: center;
+    
     float: left;
     margin-left: 300px;
     padding-top: 50px;
@@ -187,11 +193,13 @@ body {
 .boxes h2 {
     font-size: 70px;
     padding-bottom: 150px;
+    
 }
 
 .boxes p {
     font-size: 30px;
     padding-top: 20px;
+   
 }
 
 /*funcionalidades*/
