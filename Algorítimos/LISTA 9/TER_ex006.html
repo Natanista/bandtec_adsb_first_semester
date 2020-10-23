@@ -7,16 +7,33 @@
     <title>TERNÁRIO_ex006</title>
 </head>
 
-<body>
-    <div id="player1" style="background-color: red;height: 20px;"></div>
-    <br>
-    <div id="player2" style="background-color: aqua;height: 20px;"></div><br><br>
-    <button onclick="bater()">Porrada Aleatória</button><br><br>
-    <div id="resultado"></div>
-    <div id="golpe"></div>
+<body style="margin:0;padding:0;">
+    <h3>Vida 1</h3>
+    <div style="height: 20px; background-color: aqua;" id="vida1"></div>
+    <h3>Vida 2</h3>
+    <div style="height: 20px; background-color: red;" id="vida2"></div><br><br>
+    <button onclick="porrada()">Porrada Aleatória</button>
 
-    <script src="TER_ex006.js">
-       
+    <script>
+        let largura1 = 100;
+        let largura2 = 100;
+        vida1.style.width = `${largura1}%`;
+        vida2.style.width = `${largura2}%`;
+
+        function porrada() {
+            let sorteio = Math.trunc((Math.random() * 2) + 1);
+            
+
+            if (sorteio == 1) {
+                let larguraAtual1 = largura1 -  (Math.random() * 20);
+                vida1.style.width = `${larguraAtual1}%`;
+            } else {
+                let LarguraAtual = largura2 -  (Math.random() * 20);
+                vida2.style.width = `${larguraAtual2}%`;
+            }
+
+
+        }
     </script>
 </body>
 
