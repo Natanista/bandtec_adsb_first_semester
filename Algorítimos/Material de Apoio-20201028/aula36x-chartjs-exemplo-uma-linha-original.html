@@ -136,7 +136,7 @@
 			var hora = agora.getHours();
 			var minuto = agora.getMinutes();
 			var segundo = agora.getSeconds();
-			var momento = `${hora>9?'':'0'}${hora}:${minuto>9?'':'0'}${minuto}:${segundo>9?'':'0'}${segundo}`;
+			var momento = `${hora>9?'':'0'}${hora}:${minuto>9?'':'0'z}${minuto}:${segundo>9?'':'0'}${segundo}`;
 
 			// esse "novoRegistro" será recuperado do backend futuramente
 			var novoRegistro = {
@@ -156,7 +156,7 @@
 			// agendar a chamada da mesma função para daqui a 7 segundos
 			receberNovasLeituras();	
 
-		}, 20000); // 7000 ms -> 7 segundos
+		}, 1000); // 7000 ms -> 7 segundos
 	}
 
 	function plotarGrafico() {
