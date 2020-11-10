@@ -6,10 +6,7 @@ function analisar() {
 
 
   while ((c < 31, i < 31)) {
-    res.innerHTML += `<br>Dia ${i} - <b>Musculação</b>`;
-
     
-    c = c + salto;
-    i++;
+    res.innerHTML += `<br>Dia ${i} - <b>Musculação</b>`;
   }
 }
