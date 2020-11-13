@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <input type="text" id="nome">
+
+    <button onclick="inserir()">Inserir</button>
+
+    <button onclick="mostrar()">Mostrar</button><br><br><br>
+
+    <div id="div_mens"></div>
+
+    <script>
+        let nomes = [];
+
+        function inserir() {
+            let nome = document.getElementById("nome");
+            nomes.push(nome.value);
+            nome.value = ``;
+        }
+
+        function mostrar() {
+            const lista = (nomes.length);
+            for(let c = 0;c < lista; c++){
+                div_mens.innerHTML += `<br>${nomes[c]}`
+            }
+        }
+    </script>
+</body>
+
+</html>
