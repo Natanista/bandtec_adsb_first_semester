@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>charrete</title>
+</head>
+<body>
+    <h1>Operações com textos</h1>
+    <input type="text" id="texto" onkeyup="executar()">
+    <div id="res"></div>
+
+
+    <script>
+        function executar(){
+            res.innerHTML = ``
+            let palavra = texto.value;
+            res.innerHTML += `<br>A frase: ${palavra}`;
+            res.innerHTML += `<br>Mostrando a terceira posição com charAt: ${palavra.charAt(2)}`;//terceira letra
+            res.innerHTML += `<br>Mostrando a terceira posição: ${palavra[2]}`;
+            res.innerHTML += `<br>começa com bom? : ${palavra.startsWith("Bom")}`;
+            res.innerHTML += `<br>palavra com NATAN no inicio: ${palavra.padStart(20,'NATAN')}`;
+            res.innerHTML += `<br>Começa com maiuscula?:`;
+
+        }
+    </script>
+</body>
+</html>
