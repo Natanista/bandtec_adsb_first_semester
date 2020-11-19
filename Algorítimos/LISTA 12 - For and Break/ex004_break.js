@@ -1,24 +1,37 @@
-function ver() {
-    conjunto = [];
-    let referencia = 0;
+function ver(){
     res.innerHTML = ``;
-    let numeroSorte = Number(document.getElementById("numero").value);
-    for (let c = 1; c <= 20; c++) {
-        let randomico = (Math.trunc((Math.random() * 100) + 1));
-        
-        conjunto.push(randomico);
-        res.innerHTML += `<b>${randomico} </b>`; 
-        referencia++;
-        if(randomico == numeroSorte){
+    let filme;
+    let contador = 0;
+    let filmes = [];
+    let outroFilme;
+    let valor = combo.value;
+    if(valor == "1"){
+        filme = 'Marvel';
+        outroFilme = 'DC';
+    }else{
+        filme = 'DC';
+        outroFilme = 'Marvel';
+    }
+
+
+    for(let c = 1; c <= 5; c++){
+        let randomico = Math.trunc((Math.random() * 2) + 1);
+       contador = c;
+        if(randomico == valor){
+            filmes.push(filme);
+            res.innerHTML += `<br>${c}º-${filme}`; 
             break;
         }else{
-            continue;
+            filmes.push(outroFilme);
+            res.innerHTML += `<br>${c}º${outroFilme}`;
         }
-      
+        
+
     }
-    if(conjunto.indexOf(numeroSorte) == -1){
-        res.innerHTML += `<br>É, você não tem muita sorte em sorteios, pelo visto`
+    if(filmes.indexOf(filme) == -1){
+        res.innerHTML += `<br>É, ou lê um livro ou assiste um filme que não gosta mesmo`
     }else{
-        res.innerHTML += `<br>Muito bem, você é uma pessoa de sorte! Seu número saiu no ${referencia}º sorteio`;
+        res.innerHTML += `<br>Você verá um filme que gosta no ${contador}º dia`;
     }
+
 }
