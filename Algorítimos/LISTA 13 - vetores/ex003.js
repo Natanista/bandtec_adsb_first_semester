@@ -2,8 +2,8 @@ filme.value = ``;
 let filmes = [];
 
 function cadastrar() {
-  filmes.unshift(filme.value);
+  filmes.push(filme.value);
   filme.value = ``;
 
-  res.innerHTML += `<br>${filmes[0]}`;
+  res.innerHTML += `<br>${filmes[filmes.length - 1]}`;
 }
