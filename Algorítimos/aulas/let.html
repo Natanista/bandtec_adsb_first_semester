@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3>Aula 47 - variavel let</h3>
+    <p>Você já clicou <b id="a_vezes">0</b> vezes</p>
+    <button onclick="contar()">Clique aqui</button>
+
+    <button onclick="atualizar()">atualizar contador</button>
+    <br><br><div id="div_mens"></div>
+    <br><br><div id="div_loop"></div>
+
+
+
+    <script>
+        let vezes = 0;
+
+        function contar() {
+            vezes++;
+        }
+
+        function atualizar() {
+            a_vezes.innerHTML = vezes;
+            for(let index = 0; index < 5; index++){
+                div_loop.innerHTML += `<br>estou na ${index} volta`;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex003</title>
+</head>
+
+<body>
+    <h3>Saldo: R$ <b id="saldos">0.00</b></h3>
+    <h3>Depósitos: <b id="depositos">0</b></h3>
+    <h3>Saques:<b id="saques">0</b></h3>
+    <button onclick="depositar()">Depositar 100</button>
+    <button onclick="sacar()">Sacar 20</button>
+    <script>
+        let saque = 0;
+        let deposito = 0;
+        let saldo = 0;
+
+        function sacar() {
+            saldo -=20;
+            saque++;
+            saques.innerHTML = `${saque}`;
+            saldos.innerHTML = `${saldo}`;
+        }
+
+        function depositar() {
+            deposito++;
+            depositos.innerHTML = `${deposito}`;
+            saldo += 100;
+            saldos.innerHTML = `${saldo}`;
+
+        }
+    </script>
+</body>
+
+</html>

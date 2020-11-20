@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex002</title>
+</head>
+<body>
+    <h1>Time 1</h1>
+    <h3>Nome do time: <input type="text" id="nome1"></h3>
+    <h3>Nº vitórias: <input type="text" id="vitorias1"></h3>
+    <h3>Nº empates: <input type="text" id="empates1"></h3>
+    <h3>Nº derrotas: <input type="text" id="derrotas1"></h3>
+
+    <h1>Time 2</h1>
+    <h3>Nome do time: <input type="text" id="nome2"></h3>
+    <h3>Nº vitórias: <input type="text" id="vitorias2"></h3>
+    <h3>Nº empates: <input type="text" id="empates2"></h3>
+    <h3>Nº derrotas: <input type="text" id="derrotas2"></h3>
+
+    <button onclick="comparar()">Comparar campanhas</button>
+
+    <div id="div_mens"></div>
+
+
+
+
+    <script>
+        function comparar(){
+            div_mens.innerHTML = ``;
+
+        
+        let dados1 = {
+            nome: nome1.value,
+            vitoria:vitorias1.value * 3,
+            empate:empates1.value * 1,
+            derrota:derrotas1.value * 0
+        }
+
+        let dados2 = {
+            nome: nome2.value,
+            vitoria:vitorias2.value * 3,
+            empate:empates2.value * 1,
+            derrota:derrotas2.value * 0
+        }
+
+        let pontos1 = dados1.vitoria + dados1.empate + dados1.derrota;
+
+        let pontos2 =  dados2.vitoria + dados2.empate + dados2.derrota;
+
+        div_mens.innerHTML += `<br>O time <b>${dados1.nome}</b> terminou o campeonato com <b>${pontos1}</b> pontos`;
+
+        div_mens.innerHTML += `<br>O time <b>${dados2.nome}</b> terminou o campeonato com <b>${pontos2}</b> pontos`;
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+</head>
+
+<body>
+    <h1>Estado 1:</h1>
+    <!--input estado 1-->
+    <div class="estado1">
+
+        <!--recebendo qtde de habitantes-->
+        <h3>Insira quantos habitantes existem: <input type="text" id="qtde1"></h3>
+
+        <!--recebendo renda per capita-->
+        <h3>Qula a renda per capita? <input type="text" id="renda1"></h3>
+    </div>
+    <h1>Estado 2</h1>
+    <!--input estado 2-->
+    
+        <!--recebendo qtde de habitantes-->
+        <h3>Insira quantos habitantes existem: <input type="text" id="qtde2"></h3>
+
+        <!--recebendo renda per capita-->
+        <h3>Qula a renda per capita? <input type="text" id="renda2"></h3>
+    </div>
+
+    <!--botão que chama a função mostrar()-->
+    <button onclick="mostrar()">Mostrar</button><br><br>
+
+    <!--div para mostrar o resultado-->
+    <div id="res"></div>
+
+    <script>
+      
+        function mostrar() {
+            res.innerHTML = ``;
+              //JSON com dados do estado 1
+        let estado1 = {
+            populacao: qtde1.value,
+            rp: renda1.value
+        }
+        //JSON com dados do estado 2
+        let estado2 = {
+            populacao: qtde2.value,
+            rp: renda2.value
+        }
+            //geração de resultados
+            res.innerHTML +=
+                `O índice de renda do estado 1 é de $ ${estado1.populacao / estado1.rp}<br>`;
+
+            res.innerHTML +=
+                `O índice de renda do estado 2 é de ${estado2.populacao / estado2.rp}`;
+        }
+    </script>
+</body>
+
+</html>
