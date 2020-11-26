@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>radio buttons</title>
+</head>
+<body>
+    <p>Escolha uma opção</p>
+    <input type="radio" checked name="rad" id="int1"> <label>Tofu</label>
+    <input type="radio" name="rad" id="int2"> <label>Brocolis</label>
+    <input type="radio" name="rad" id="int3"> <label>Maça</label>
+    <br><br>
+    <p>Indique seus interesses</p>
+    <input type="checkbox" checked name="rad2" id="int1"> <label>Passar de ano</label>
+    <input type="checkbox" name="rad2" id="int2"> <label>Ir para C6</label>
+    <input type="checkbox" name="rad2" id="int3"> <label>Cerveja gelada</label>
+    <br><br>
+    <input type="text" list="cidades" id="int">
+    <datalist id="cidades">
+        <option value="Barueri"></option>
+        <option value="São Paulo"></option>
+        <option value="Caieiras"></option>
+    </datalist>
+
+    <br><br><br>
+    <button onclick="analisar()">Analisar</button>
+
+    <script>
+        function analisar(){
+            alert(`Primeiro:${int1.checked},Segundo:${int2.checked},Terceiro:${int3.checked}`);
+        }
+    </script>
+</body>
+</html>
