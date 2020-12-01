@@ -1,6 +1,8 @@
 let raAlunos = [];
 let campoDigitavel = document.getElementById("campo").value;
 let notaAlunos = [];
+
+
 function guardar() {
   if (nota.value < 0 || nota.value > 10 || nota.value == ``) {
     alert("Por favor, digite notas entre 1 e 10!");
@@ -26,48 +28,57 @@ function ver() {
 }
 
 function analisar() {
-  //1
-  let soma2 = 0;
-  let soma = 0;
-  let qtdeAcima = 0;
-  let contadorAlunos = 0;
-  if (campo.value == "P") {
-    //2
-    for (let i = 0; i < notaAlunos.length; i++) {
-      //3
-      //par
-
-      if (raAlunos[i] % 2 == 0) {
-        //4
-        soma += Number(notaAlunos[i]);
-        contadorAlunos++;
-        let media = (soma / contadorAlunos).toFixed;
-
-        if (notaAlunos[i] >= media) {
-          qtdeAcima++;
-          div_mens.innerHTML += `<br>Aluno com RA = ${raAlunos[i]} e nota = ${notaAlunos[i]} foi selecionado pois a média é de ${media}`;
-        } else {
-          continue;
-        }
-        div_mens.innerHTML += `<br>Quantidade de notas acima da média: ${qtdeAcima}<br>Nova média: ${novaMedia}`;
-      } // 4
-
-      //impar
-      else {
-        //5
-        soma += Number(notaAlunos[i]);
-        contadorAlunos++;
-        let media = (soma / contadorAlunos).toFixed;
-
-        if (notaAlunos[i] >= media) {
-          qtdeAcima++;
-          div_mens.innerHTML += `<br>Aluno com RA = ${raAlunos[i]} e nota = ${notaAlunos[i]} foi selecionado pois a média é de ${media}`;
-        } else {
-          continue;
-        }
-        div_mens.innerHTML += `<br>Quantidade de notas acima da média: ${qtdeAcima}<br>Nova média: ${novaMedia}`;
-      } //5
-    } //3
-  } //2
   campo.value = ``;
+  div_mens.innerHTML = ``;
+  //1
+  let alunoAcima = 0;
+  let soma = 0;
+  let somaNova = 0;
+  let qtdeAlunos = 0;
+  let consulta = campo.value;
+
+  if(consulta == "P"){
+
+    for(let i = 0; i < raAlunos.length; i++){
+
+      if(raAluno[i] % 2 == 0){
+
+        soma += Number(notaAlunos[i]);
+        qtdeAlunos++;
+        
+      }
+
+    }
+    let media = Number(soma) / Number(qtdeAlunos);
+    for(let i = 0; i < raAlunos.length; i++){
+      if(notaAlunos[i] >= media){
+        div_mens.innerHTML += `<br>Aluno com RA: ${raAlunos[i]} e nota ${notaAlunos[i]} foi selecionado pois a média é de ${media}`;
+        alunoAcima++;
+        somaNova += Number(notaAlunos[i]);
+      }
+    }
+  }
+  else{// caso "I"
+
+  for(let i = 0; i < raAlunos.length; i++){
+    if(raAlunos[i] % 2 != 0){
+      soma += notaAlunos[i];
+      qtdeAlunos++;
+    }
+  }
+  let media = Number(soma) / Number(qtdeAlunos);
+    for(let i = 0; i < raAlunos.length; i++){
+      if(notaAlunos[i] >= media){
+        div_mens.innerHTML += `<br>Aluno com RA: ${raAlunos[i]} e nota ${notaAlunos[i]} foi selecionado pois a média é de ${media}`;
+        alunoAcima++;
+        somaNova += Number(notaAlunos[i]);
+      }
+    }
+   
+  } 
+  let novaMedia = Number(somaNova) / Number(alunoAcima);
+   
+  div_mens.innerHTML += `<br>Alunos acima da média : ${alunoAcima}<br>Nova média: ${novaMedia.toFixed(2)}`;
+
+  
 } //1
