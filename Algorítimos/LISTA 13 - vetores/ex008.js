@@ -1,41 +1,41 @@
 // conjunto para guardar os valores e os dias
-let carteira = [];
-let valores = [];
+let dia = ['1'];
+let valores = ['1'];
 
-//contador de dias para resposta final
-let contador = 0;
 
-// função para guardar os valores em "carteira"
 function guardar() {
-  //verificação de dia válido 1-31
-  if (dia.value < 1 || dia.value > 30 || valor < 0) {
+  if (dias.value < 1 || dias.value > 30 || valor.value <= 0) {
     alert(`Digite apenas valores válidos`);
   } else {
-    //inserindo os valores nos respectivos vetores
-    carteira.push(`${dia.value}º - ${valor.value}`);
-
-   
-}
+    dia.push(`${dias.value}`);
+    valores.push(`${valor.value}`);
   }
-  //zerando os inputs
-  dia.value = ``;
+  dias.value = ``;
   valor.value = ``;
-     
+}
 
-//funcao para rever os depositos
 function rever() {
-  //looping para decorrer sobre os valores do vetor "carteira"
-  for (let i = 0; i <= carteira.length; i++) {
-    //verificando se a primeira "letra" do valor referido 'i' do array é igual aos valores solicitados
-    if (carteira[i].split("", 1) == dia.value) {
-      //verdade - mostra o item
-      div_mens.innerHTML += `<br>${carteira[i]}`;
-    } else {
-      //continua o laço
-      continue;
+  div_mens.innerHTML = ``;
+  let soma = 0;
+  let contador = 0;
+  let diaInicio= diaAnalise1.value;
+  let diaFinal = diaAnalise2.value;
+
+  for (let i = 1; i <= valores.length - 1; i++) {
+
+
+    if(i >= diaInicio && i <= diaFinal){
+      div_mens.innerHTML += `<br>sequencia de digitação: ${i}º, dia ${dia[i]}, valor depositado R$${valores[i]}`;
+      soma += Number(valores[i]);
+      contador++;
     }
+
+
   }
-  // zerando os inputs de "rever"
+
+
+  let media = Number(soma) / Number(contador);
+  div_mens.innerHTML += `<br>Dias selecionados: ${contador}, valor total de depósitos: ${soma}, media do valor dos depósitos ${media}`;
   diaAnalise1.value = ``;
   diaAnalise2.value = ``;
 }

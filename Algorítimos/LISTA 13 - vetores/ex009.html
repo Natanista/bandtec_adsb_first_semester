@@ -1,14 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            background-color: yellow;
+            text-align: center;
+        }
+        .btn{
+            background-color: black;
+            color: orange;
+            border: none;
+            font-size: 25px;
+            cursor: pointer;
+        }
+        h3{
+            font-size: 20px;
+        }
+    </style>
 </head>
-<body>
-    <h3>RA: <input type="number" id="ra"></h3>
-    <h3>Nota: <input type="number" id="nota"></h3>
 
+<body>
+
+    <h3>RA:<br> <input type="number" id="ra"></h3>
+    <h3>Nota:<br> <input type="number" id="nota"></h3>
+    <button class="btn" onclick="guardar()">Guardar</button>
+    <br><br>
+    <h3>Para os RA par: "P", para os RA impares:"I":<br> <input type="text" id="campo"></h3>
+    <button class="btn" onkeyup="ver()" onclick="analisar()">Analisar</button>
+    <br><br>
+    <div id="div_mens"></div>
     <script src="ex009.js"></script>
 </body>
+
 </html>
