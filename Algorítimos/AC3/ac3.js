@@ -144,7 +144,7 @@ function analisar() {
   let media = Number(percentualTodos.toFixed(2)) / Number(qtdeClientes);
 
   for (let i = 0; i <= nomes.length; i++) {
-    if (Number(Rendimentos[i]) > media) {
+    if (Number(Rendimentos[i]) >= media) {
       listados++;
     }
   }
